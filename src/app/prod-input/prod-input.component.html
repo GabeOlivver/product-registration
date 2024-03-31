@@ -1,34 +1,39 @@
 <div class="container-sm m-auto mt-5 bg-body-secondary rounded
 shadow p-3 mb-5 bg-body-tertiary rounded">
+    
     <h1 class="text-center">PRODUCTS</h1>
-    <form class="row g-3">
+    <form class="row g-3" [formGroup]="formGroupProduct">
+        
         <div class="col-md-6">
             <label for="inputID"class="form-label">Product ID</label>
-            <input type="number" class="form-control" id="prod_id">
+            <input type="number" class="form-control" id="prod_id" formControlName="id">
         </div>
+        
         <div class="col-md-6">
             <label for="inputprodName" class="form-label">Product name</label>
-            <input type="text" class="form-control" id="prod_name">
+            <input type="text" class="form-control" id="prod_name" formControlName="name">
         </div>
+        
         <div class="col-12">
             <div class="mb-3">
                 <label for="prodDescription" class="form-label">Description</label>
-                <textarea class="form-control" id="prod_description" rows="3"></textarea>
+                <textarea class="form-control" id="prod_description" rows="3" formControlName="description"></textarea>
             </div>
         </div>
+        
         <div class="col-md-6">
             <label for="inputqnt" class="form-label">Quantity (unit)</label>
-            <input type="number" class="form-control" id="prodQuant">
+            <input type="number" class="form-control" id="prodQuant" formControlName="quantity">
         </div>
         <div class="col-md-6">
             <label for="inputprice" class="form-label">Price</label>
-            <input type="value" class="form-control" id="prodPrice">
+            <input type="value" class="form-control" id="prodPrice" formControlName="price">
         </div>
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn btn-primary" type="submit">SAVE</button>
+            <button class="btn btn-primary" type="submit" (click)="save()">SAVE</button>
         </div>
     </form>
-    <h1 class="text-center mt-5">PRODUCTS</h1>
+    <h2 class="text-center mt-5">PRODUCTS</h2>
     <table class="table table-striped mt-5">
         <thead>
           <tr>
@@ -40,26 +45,12 @@ shadow p-3 mb-5 bg-body-tertiary rounded">
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let p of products">
             <th scope="row">1</th>
-            <td>thing1</td>
-            <td>12</td>
-            <td>12,00</td>
-            <td>blue</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>thing2</td>
-            <td>13</td>
-            <td>13,00</td>
-            <td>red</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>thing3</td>
-            <td>14</td>
-            <td>14,00</td>
-            <td>green</td>
+            <td>{{p.name}}</td>
+            <td>{{p.quantity}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.description}}</td>
           </tr>
         </tbody>
       </table>

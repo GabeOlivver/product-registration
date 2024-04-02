@@ -46,7 +46,7 @@ shadow p-3 mb-5 bg-body-tertiary rounded">
         </thead>
         <tbody>
           <tr *ngFor="let p of products">
-            <th scope="row">1</th>
+            <th scope="row">{{p.id}}</th>
             <td>{{p.name}}</td>
             <td>{{p.quantity}}</td>
             <td>{{p.price}}</td>

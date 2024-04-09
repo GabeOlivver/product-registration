@@ -1,7 +1,32 @@
 {
-    "products": [
-      { "id": 1, "name": "a title", "quantity": 100, "price": "9.95", "description": "a description" },
-      { "id": 2, "name": "a title", "quantity": 100, "price": "9.95", "description": "a description" },
-      { "id": 3, "name": "a title", "quantity": 100, "price": "9.95", "description": "a description" }
-    ]
+  "products": [
+    {
+      "id": "1",
+      "name": "a title",
+      "quantity": 100,
+      "price": "9.95",
+      "description": "a description"
+    },
+    {
+      "id": "2",
+      "name": "a title",
+      "quantity": 100,
+      "price": "9.95",
+      "description": "a description"
+    },
+    {
+      "id": "3",
+      "name": "a title",
+      "quantity": 100,
+      "price": "9.95",
+      "description": "a description"
+    },
+    {
+      "id": 4,
+      "name": "Amir",
+      "quantity": 1,
+      "price": "1",
+      "description": "exod"
+    }
+  ]
 }

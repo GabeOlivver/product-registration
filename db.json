@@ -1,0 +1,7 @@
+{
+    "products": [
+      { "id": 1, "name": "a title", "quantity": 100, "price": "9.95", "description": "a description" },
+      { "id": 2, "name": "a title", "quantity": 100, "price": "9.95", "description": "a description" },
+      { "id": 3, "name": "a title", "quantity": 100, "price": "9.95", "description": "a description" }
+    ]
+}
